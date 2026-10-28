@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VINCENT — AI race engineer for iRacing</title>
+<meta name="description" content="VINCENT is a voice race engineer for iRacing. He reads live telemetry, keeps the race book, plans fuel and stops, and talks to you on the radio.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-512.png">
+<meta property="og:title" content="VINCENT — AI race engineer for iRacing">
+<meta property="og:description" content="He reads the race. You drive it. Probably the best non-human engineer.">
+<meta property="og:image" content="https://vincent-ai.app/assets/og.jpg">
+<meta property="og:url" content="https://vincent-ai.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main" data-en="Skip to content" data-es="Saltar al contenido">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="VINCENT"><img src="assets/logo.svg" alt="VINCENT" width="140" height="21"></a>
+  <span class="tag">Probably the best non-human engineer</span>
+  <nav aria-label="Main">
+    <a href="#how" data-en="How it works" data-es="Cómo funciona">How it works</a>
+    <a href="#features" data-en="Features" data-es="Funciones">Features</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+  </div>
+  <a class="btn btn-y dl" href="https://github.com/franzaragoza1/vincent-releases/releases/latest" data-en="Download" data-es="Descargar">Download</a>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="cap" data-en="Your race engineer, on the radio" data-es="Tu ingeniero de carrera, por radio">Your race engineer, on the radio</p>
+    <h1 class="wordmark"><img src="assets/logo.svg" alt="VINCENT" width="560" height="84"></h1>
+    <p class="head" data-en="He reads the race.<br>You drive it." data-es="Él lee la carrera.<br>Tú conduces.">He reads the race.<br>You drive it.</p>
+    <p class="lede" data-en="A voice engineer for iRacing. He watches every lap, keeps the race book of every car, knows the series rules, plans fuel and stops — and talks to you like a real pit wall." data-es="Un ingeniero por voz para iRacing. Mira cada vuelta, lleva el libro de carrera de todos los coches, conoce el reglamento de la serie, planifica gasolina y paradas — y te habla como un muro de boxes de verdad.">A voice engineer for iRacing. He watches every lap, keeps the race book of every car, knows the series rules, plans fuel and stops — and talks to you like a real pit wall.</p>
+    <div class="cta">
+      <a class="btn btn-y btn-big dl" href="https://github.com/franzaragoza1/vincent-releases/releases/latest"><span data-en="Download for Windows" data-es="Descargar para Windows">Download for Windows</span></a>
+      <span class="ver" id="ver" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <div class="hero-wall" aria-hidden="true">
+    <div class="scr">
+      <div class="scr-h"><span>LIVE TIMING · GT3</span><span>LAP 18 / 32</span></div>
+      <table class="timing">
+        <thead><tr><th class="l">P</th><th>±</th><th>#</th><th class="l">DRIVER</th><th class="xs">LAST</th><th>BEST</th><th>GAP</th></tr></thead>
+        <tbody>
+          <tr><td class="l">1</td><td class="up">+1</td><td class="num">7</td><td class="l">R. HOLLAND</td><td class="xs">1:58.412</td><td class="mag">1:57.906</td><td>—</td></tr>
+          <tr class="me"><td class="l"><span class="pos">2</span></td><td class="eq">=</td><td class="num">70</td><td class="l">YOU</td><td class="xs grn">1:58.103</td><td>1:58.103</td><td>+1.214</td></tr>
+          <tr><td class="l">3</td><td class="dn">-1</td><td class="num">33</td><td class="l">M. LINDQVIST</td><td class="xs">1:58.977</td><td>1:58.540</td><td>+1.8</td></tr>
+          <tr><td class="l">4</td><td class="eq">=</td><td class="num">12</td><td class="l">T. OKAFOR</td><td class="xs">1:59.310</td><td>1:58.871</td><td>+4.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pnl">
+      <div class="ph"><span>Radio</span><small data-en="team channel" data-es="canal de equipo">team channel</small></div>
+      <div class="radio" id="radio"></div>
+    </div>
+    <div class="onair"><span class="k">VINCENT</span><span class="v"><span class="bars"><i></i><i></i><i></i><i></i></span>ON AIR</span></div>
+  </div>
+</section>
+
+<section id="how" class="band">
+  <h2 class="sec" data-en="How it works" data-es="Cómo funciona">How it works</h2>
+  <div class="grid3">
+    <div class="pnl step"><div class="ph"><span>01</span><small data-en="Set up" data-es="Configura">Set up</small></div>
+      <div class="body"><h3 data-en="Install and connect" data-es="Instala y conecta">Install and connect</h3>
+      <p data-en="Run the installer, follow the setup wizard, paste your API keys and pick a voice. The systems check goes green when everything answers." data-es="Ejecuta el instalador, sigue el asistente, pega tus claves de API y elige una voz. El chequeo de sistemas se pone en verde cuando todo responde.">Run the installer, follow the setup wizard, paste your API keys and pick your wheel button. The systems check goes green when everything answers.</p></div></div>
+    <div class="pnl step"><div class="ph"><span>02</span><small data-en="Race" data-es="Corre">Race</small></div>
+      <div class="body"><h3 data-en="One button on the wheel" data-es="Un botón en el volante">One button on the wheel</h3>
+      <p data-en="Ask him anything — gaps, fuel, who's quicker, when to box. He also calls the important things on his own, and keeps quiet when you need to focus." data-es="Pregúntale lo que quieras — diferencias, gasolina, quién va más rápido, cuándo parar. También avisa él solo de lo importante, y se calla cuando necesitas concentrarte.">Ask him anything — gaps, fuel, who's quicker, when to box. He also calls the important things on his own, and keeps quiet when you need to focus.</p></div></div>
+    <div class="pnl step"><div class="ph"><span>03</span><small data-en="Remember" data-es="Recuerda">Remember</small></div>
+      <div class="body"><h3 data-en="He learns your series" data-es="Aprende tu serie">He learns your series</h3>
+      <p data-en="After each race he writes a report. Next time you race that series, he already knows how it went." data-es="Después de cada carrera escribe un informe. La próxima vez que corras esa serie, ya sabe cómo fue.">After each race he writes a report. Next time you race that series, he already knows how it went.</p></div></div>
+  </div>
+</section>
+
+<section id="features" class="band">
+  <h2 class="sec" data-en="On the pit wall" data-es="En el muro">On the pit wall</h2>
+  <div class="feat">
+    <div class="pnl"><div class="ph"><span data-en="Live race book" data-es="Libro de carrera">Live race book</span></div><p data-en="Every car, every lap: times, positions, stops. Nothing is forgotten, nothing is invented." data-es="Cada coche, cada vuelta: tiempos, posiciones, paradas. No se olvida nada, no se inventa nada.">Every car, every lap: times, positions, stops. Nothing is forgotten, nothing is invented.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="Fuel &amp; strategy" data-es="Gasolina y estrategia">Fuel &amp; strategy</span></div><p data-en="Knows the series rules and the pit-service rules of each championship — fuel only, simultaneous service, no refuelling." data-es="Conoce el reglamento de la serie y las reglas de servicio en boxes de cada campeonato — solo gasolina, servicio simultáneo, sin repostaje.">Knows the series rules and the pit-service rules of each championship — fuel only, simultaneous service, no refuelling.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="Radio modes" data-es="Modos de radio">Radio modes</span></div><p data-en="Direct, Normal or Competition: from chatty to critical-only. Change it by voice mid-race." data-es="Directo, Normal o Competición: de hablador a solo lo crítico. Cámbialo por voz en plena carrera.">Direct, Normal or Competition: from chatty to critical-only. Change it by voice mid-race.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="Two personalities" data-es="Dos personalidades">Two personalities</span></div><p data-en="Classic: dry, deadpan, all business. Veteran: warm, passionate, full of war stories. Same engineer, same data." data-es="Clásico: seco, impasible, al grano. Veterano: cálido, apasionado, lleno de batallitas. Mismo ingeniero, mismos datos.">Classic: dry, deadpan, all business. Veteran: warm, passionate, full of war stories. Same engineer, same data.</p></div>
+    <div class="pnl"><div class="ph"><span>Spotter</span></div><p data-en="Instant car-left / car-right calls, independent from the AI, so they're never late." data-es="Avisos instantáneos de coche a la izquierda / derecha, independientes de la IA, para que nunca lleguen tarde.">Instant car-left / car-right calls, independent from the AI, so they're never late.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="English &amp; Spanish" data-es="Inglés y español">English &amp; Spanish</span></div><p data-en="Full app and engineer in both languages. In Spanish he answers to Vicen." data-es="App e ingeniero completos en los dos idiomas. En español se llama Vicen.">Full app and engineer in both languages. In Spanish he answers to Vicen.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="Pit-wall panel" data-es="Panel de muro">Pit-wall panel</span></div><p data-en="Timing, sectors, stints, strategy and the radio log on a second screen — styled like a real timing wall." data-es="Tiempos, sectores, stints, estrategia y el registro de radio en una segunda pantalla — con el aspecto de un muro de tiempos de verdad.">Timing, sectors, stints, strategy and the radio log on a second screen — styled like a real timing wall.</p></div>
+    <div class="pnl"><div class="ph"><span data-en="Made for streaming" data-es="Hecho para stream">Made for streaming</span></div><p data-en="Radio overlay for OBS and optional Twitch chat: viewers can talk to your engineer." data-es="Overlay de radio para OBS y chat de Twitch opcional: los espectadores pueden hablar con tu ingeniero.">Radio overlay for OBS and optional Twitch chat: viewers can talk to your engineer.</p></div>
+  </div>
+</section>
+
+<section id="faq" class="band">
+  <h2 class="sec">FAQ</h2>
+  <div class="faq">
+    <details class="pnl"><summary data-en="Which sims does it support?" data-es="¿Qué simuladores soporta?">Which sims does it support?</summary><p data-en="iRacing only, for now." data-es="Solo iRacing, de momento.">iRacing only, for now.</p></details>
+    <details class="pnl"><summary data-en="What do I need?" data-es="¿Qué necesito?">What do I need?</summary><p data-en="A Windows PC, iRacing, a microphone, and an internet connection. VINCENT uses cloud AI and voice services, so you bring your own API keys (OpenRouter, Fish Audio, Deepgram) — the setup wizard checks them for you." data-es="Un PC con Windows, iRacing, un micrófono y conexión a internet. VINCENT usa servicios de IA y voz en la nube, así que necesitas tus propias claves de API (OpenRouter, Fish Audio, Deepgram) — el asistente las comprueba por ti.">A Windows PC, iRacing, a microphone, and an internet connection. VINCENT uses cloud AI and voice services, so you bring your own API keys (OpenRouter, Fish Audio, Deepgram) — the setup wizard checks them for you.</p></details>
+    <details class="pnl"><summary data-en="How much does a race cost to run?" data-es="¿Cuánto cuesta cada carrera?">How much does a race cost to run?</summary><p data-en="It depends on the AI model you choose in settings — cheaper models cost cents per race, the best ones a bit more. The app shows token usage live so you always know." data-es="Depende del modelo de IA que elijas en ajustes — los más baratos cuestan céntimos por carrera, los mejores algo más. La app muestra el consumo en directo para que siempre lo sepas.">It depends on the AI model you choose in settings — cheaper models cost cents per race, the best ones a bit more. The app shows token usage live so you always know.</p></details>
+    <details class="pnl"><summary data-en="Is it allowed in official races?" data-es="¿Está permitido en carreras oficiales?">Is it allowed in official races?</summary><p data-en="VINCENT only reads the telemetry iRacing exposes to every app and talks to you. It never touches the car or the sim." data-es="VINCENT solo lee la telemetría que iRacing ofrece a cualquier aplicación y te habla. Nunca toca el coche ni el simulador.">VINCENT only reads the telemetry iRacing exposes to every app and talks to you. It never touches the car or the sim.</p></details>
+    <details class="pnl"><summary data-en="Windows says “unknown publisher”" data-es="Windows dice «editor desconocido»">Windows says “unknown publisher”</summary><p data-en="The first time, SmartScreen may warn you. Click More info → Run anyway. After that VINCENT updates itself: it downloads new versions when it opens and installs them when it closes." data-es="La primera vez, SmartScreen puede avisarte. Pulsa Más información → Ejecutar de todas formas. Después VINCENT se actualiza solo: descarga la versión nueva al abrirse y la instala al cerrarse.">The first time, SmartScreen may warn you. Click More info → Run anyway. After that VINCENT updates itself: it downloads new versions when it opens and installs them when it closes.</p></details>
+  </div>
+</section>
+
+<section class="band final">
+  <img src="assets/icon.svg" alt="" width="96" height="96">
+  <p class="head" data-en="Radio check?" data-es="¿Me recibes?">Radio check?</p>
+  <a class="btn btn-y btn-big dl" href="https://github.com/franzaragoza1/vincent-releases/releases/latest"><span data-en="Download for Windows" data-es="Descargar para Windows">Download for Windows</span></a>
+</section>
+
+</main>
+
+<footer class="foot">
+  <img src="assets/logo.svg" alt="VINCENT" width="110" height="17">
+  <p data-en="VINCENT is an independent project, not affiliated with or endorsed by iRacing.com Motorsport Simulations." data-es="VINCENT es un proyecto independiente, sin relación ni respaldo de iRacing.com Motorsport Simulations.">VINCENT is an independent project, not affiliated with or endorsed by iRacing.com Motorsport Simulations.</p>
+  <p><a href="https://github.com/franzaragoza1/vincent-releases/releases" data-en="All releases" data-es="Todas las versiones">All releases</a></p>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
