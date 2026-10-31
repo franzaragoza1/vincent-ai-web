@@ -63,15 +63,12 @@
   try { saved = localStorage.getItem('vincent-lang'); } catch (e) {}
   setLang(saved || ((navigator.language || '').toLowerCase().indexOf('es') === 0 ? 'es' : 'en'));
 
-  // Point download buttons straight at the latest installer
-  fetch('https://api.github.com/repos/franzaragoza1/vincent-releases/releases/latest')
+  // Latest version number (the download itself needs a Discord sign-in)
+  fetch('https://account.vincent-ai.app/api/version')
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (j) {
-      if (!j) return;
-      var a = (j.assets || []).filter(function (x) { return /\.exe$/i.test(x.name); })[0];
-      if (!a) return;
-      release = { v: (j.tag_name || '').replace(/^v/, ''), url: a.browser_download_url };
-      document.querySelectorAll('a.dl').forEach(function (el) { el.href = release.url; });
+      if (!j || !j.version) return;
+      release = { v: j.version };
       showVersion();
     })
     .catch(function () {});

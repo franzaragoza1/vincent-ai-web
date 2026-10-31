@@ -36,6 +36,7 @@ a{color:inherit}
 .wordmark{margin:0;background:var(--team);padding:22px 26px;align-self:flex-start;max-width:100%}
 .wordmark img{width:min(520px,100%)}
 .head{margin:0;font:800 clamp(40px,5.2vw,68px)/1 Cond,sans-serif;text-transform:uppercase;color:var(--w);letter-spacing:.01em}
+.note{margin:14px 0 0;font-size:14px;letter-spacing:.04em;color:#D6D8DB}
 .lede{margin:0;font-size:20px;line-height:1.5;max-width:600px}
 .cta{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
 .ver{font:700 16px/1 Cond,sans-serif;letter-spacing:.1em;color:#D6D8DB;text-transform:uppercase}
