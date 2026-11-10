@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VINCENT — Setup guide</title>
+<meta name="description" content="How to install, sign in and set up VINCENT, the AI race engineer for iRacing, step by step.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta property="og:title" content="VINCENT — Setup guide">
+<meta property="og:image" content="https://vincent-ai.app/assets/og.jpg">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="VINCENT"><img src="assets/logo.svg" alt="VINCENT" width="140" height="21"></a>
+  <nav aria-label="Main">
+    <a href="./" data-en="Home" data-es="Inicio">Home</a>
+    <a href="guide.html" aria-current="page" data-en="Setup guide" data-es="Guía">Setup guide</a>
+    <a href="https://discord.gg/QKNpvAFxPN" target="_blank" rel="noopener">Discord</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+  </div>
+  <a class="btn btn-y dl" href="https://account.vincent-ai.app/download" data-en="Get it free" data-es="Descárgalo gratis">Get it free</a>
+</header>
+<main class="guide" data-lang-block="en" lang="en">
+<div class="ghero"><p class="eyebrow">Get started</p><h1 class="head">Setup guide</h1><p class="lede">Everything from download to your first race, in the order you'll do it. About 15 minutes the first time.</p></div>
+<div class="gwrap"><nav class="toc" aria-label="On this page"><p class="toc-t">On this page</p><ol><li><a href="#before"><span>01</span>Before you start</a></li><li><a href="#install"><span>02</span>Download and install</a></li><li><a href="#signin"><span>03</span>Sign in</a></li><li><a href="#openrouter"><span>04</span>Get your OpenRouter key</a></li><li><a href="#wizard"><span>05</span>The setup wizard</a></li><li><a href="#session"><span>06</span>Start a session</a></li><li><a href="#race"><span>07</span>Talking to Vincent</a></li><li><a href="#streaming"><span>08</span>Streaming</a></li><li><a href="#costs"><span>09</span>Costs and credit</a></li><li><a href="#troubleshooting"><span>10</span>Troubleshooting</a></li><li><a href="#help"><span>11</span>Get help and report bugs</a></li></ol>
+<a class="btn btn-y toc-dc" href="https://discord.gg/QKNpvAFxPN" target="_blank" rel="noopener">Ask on Discord</a></nav>
+<div class="gmain"><section class="gsec" id="before"><div class="ph"><span>01 · Before you start</span><small>What you need</small></div><div class="gbody">
+<ul class="list">
+<li>A <b>Windows PC</b> with <b>iRacing</b>.</li>
+<li><b>Headphones or speakers</b> and a <b>microphone</b>.</li>
+<li>An internet connection. VINCENT's brain, voice and ears run in the cloud.</li>
+<li>A <b>Discord or Google</b> account, to sign in.</li>
+<li>An <b>OpenRouter</b> account with a little credit. About $5 is plenty to start. VINCENT itself is free and charges nothing: you pay OpenRouter directly for what you use.</li>
+<li>Optional: a <b>button on your wheel</b> for the radio. Without a wheel you can talk with the Mic button in the app.</li>
+</ul>
+</div></section><section class="gsec" id="install"><div class="ph"><span>02 · Download and install</span><small>Step 1</small></div><div class="gbody">
+<ol class="ol">
+<li>Go to <a href="https://account.vincent-ai.app/download">account.vincent-ai.app/download</a> and sign in with Discord or Google.</li>
+<li>Download the installer and run it.</li>
+<li>The first time, Windows may show <b>“Windows protected your PC”</b> (SmartScreen). Click <b>More info → Run anyway</b>. It only happens once.</li>
+</ol>
+<p class="note"><b>Updates are automatic.</b> VINCENT downloads new versions when it opens and installs them when you close it. If you see <b>Update to x.x.x</b> at the top, click it to update right away.</p>
+</div></section><section class="gsec" id="signin"><div class="ph"><span>03 · Sign in</span><small>Step 2</small></div><div class="gbody">
+<p>VINCENT asks you to sign in the first time you open it.</p>
+<ol class="ol">
+<li>Click <b>Sign in</b>. Your browser opens.</li>
+<li>Sign in with the same Discord or Google account.</li>
+<li>Check that the code in the browser <b>matches the one in the app</b> and confirm. VINCENT carries on by itself.</li>
+</ol>
+<p class="note">Each account works on up to <b>3 PCs</b>. You can manage them at <a href="https://account.vincent-ai.app/">account.vincent-ai.app</a>. If your internet drops, VINCENT keeps working for a few days with your last sign-in.</p>
+</div></section><section class="gsec" id="openrouter"><div class="ph"><span>04 · Get your OpenRouter key</span><small>Step 3</small></div><div class="gbody">
+<p>One key powers everything: the engineer's brain, his voice and his ears.</p>
+<ol class="ol">
+<li>Create an account at <a href="https://openrouter.ai">openrouter.ai</a>.</li>
+<li>Open <b>Credits</b> and add some credit. Around <b>$5</b> lasts a good while.</li>
+<li>Open <b>Keys → Create key</b>. Name it <i>VINCENT</i> and <b>set a credit limit</b> (for example $10).</li>
+<li>Copy the key. It starts with <code>sk-or-</code>. You'll paste it in the next step.</li>
+</ol>
+<p class="note warn"><b>Treat the key like a password.</b> Never share it or post it in a screenshot. VINCENT stores it in the Windows Credential Manager and only ever sends it to OpenRouter. With a credit limit, a leaked key can never cost you more than that limit.</p>
+</div></section><section class="gsec" id="wizard"><div class="ph"><span>05 · The setup wizard</span><small>Step 4</small></div><div class="gbody">
+<p>The first time, VINCENT walks you through these screens. You can change everything later from <b>Settings</b> at the top of the app.</p>
+
+<h3>General</h3>
+<ul class="list">
+<li><b>Language:</b> English or Spanish, for both the app and the engineer: how he talks, his voice and how he understands you.</li>
+<li><b>Personality:</b> <b>Classic</b> is dry and direct. <b>Veteran</b> is old school, warm and full of war stories. Same engineer and same strategy; only the character changes.</li>
+<li><b>Mic button:</b> <b>Hold to talk</b>: hold the button while you speak. <b>Press to toggle</b>: press once to open, press again to close. If you forget, it closes itself after 20 seconds.</li>
+</ul>
+
+<h3>Keys</h3>
+<ul class="list">
+<li>Paste your <b>OpenRouter</b> key and press <b>Test</b>. You should see <i>Valid key · balance $…</i>.</li>
+<li><b>Fish Audio</b> and <b>Deepgram</b> are optional. Only use them if you already have an account there; everything works without them.</li>
+</ul>
+
+<h3>Model</h3>
+<p>The model decides how smart, and how expensive, your engineer is. These are estimates per hour of racing:</p>
+<div class="tbl"><table>
+<tr><th>Model</th><th>Cost / race hour</th><th>Notes</th></tr>
+<tr><td>Claude Haiku 5.5</td><td>≈ $0.08</td><td>Cheapest. A bit flatter and makes more mistakes in unusual situations.</td></tr>
+<tr class="rec"><td>Gemini 3.8 Flash</td><td>≈ $0.47</td><td><b>Recommended.</b> Quick, witty, varied. The best choice for most people.</td></tr>
+<tr><td>GPT 6.1 Terra</td><td>≈ $0.50</td><td>Very fast and careful; says little. Still being tested.</td></tr>
+<tr><td>Claude Sonnet 5.5</td><td>≈ $1.00</td><td>The most powerful, for those who want the very best.</td></tr>
+</table></div>
+<p class="small">The real cost depends on how much you talk to him and how long the race is. What you've spent shows live at the top of the app. <b>Custom</b> lets you use any OpenRouter model that supports tool calling.</p>
+
+<h3>Voice</h3>
+<ul class="list">
+<li>Press <b>Listen</b> to hear each voice with the radio effect, and pick one. English voices: <b>Vincent</b>, <b>Adrian</b> and <b>Slax</b>. Spanish voices: <b>Antonio</b> and <b>Florencio</b>.</li>
+<li>Listening to a voice for the first time costs a fraction of a cent.</li>
+<li>Advanced: <b>Another Fish voice</b> lets you paste the ID of any voice from fish.audio.</li>
+</ul>
+
+<h3>Listening</h3>
+<p>How what you say on the radio is turned into text for the engineer:</p>
+<ul class="list">
+<li><b>In the cloud, with your OpenRouter key</b> (recommended): the most accurate and the fastest. Text is ready about 0.3 s after you let go of the button, for about 2 cents per race hour.</li>
+<li><b>On your PC</b>: free and offline, but less accurate with racing slang and slower (~1.5 s). It needs a one-off model download and uses some CPU while transcribing.</li>
+<li><b>Deepgram</b>: real-time, with racing vocabulary. Only if you added a Deepgram key.</li>
+</ul>
+
+<h3>Audio</h3>
+<ul class="list">
+<li><b>Output:</b> where VINCENT speaks (your headphones). Press <b>Test output</b>: you should hear two beeps.</li>
+<li><b>Input:</b> your microphone. Press <b>Test microphone</b> and talk normally for two seconds. <i>Sounds good</i> means you're done. <i>Very quiet</i> means you should turn up the mic gain in Windows. <i>Nothing coming through</i> means the wrong mic is selected or it's muted.</li>
+</ul>
+
+<h3>Wheel</h3>
+<ul class="list">
+<li>Press <b>Detect button</b>, then press the wheel button you want for the radio. You'll see <i>✓ your wheel · button N</i>.</li>
+<li>No wheel? Skip it and use the <b>Mic</b> button in the app.</li>
+</ul>
+
+<h3>Done</h3>
+<p>You'll see a summary of everything you chose. Now open iRacing.</p>
+</div></section><section class="gsec" id="session"><div class="ph"><span>06 · Start a session</span><small>Step 5</small></div><div class="gbody">
+<ol class="ol">
+<li>Open iRacing and <b>join a session</b> (practice, qualifying or race). Being in the menus isn't enough.</li>
+<li>In VINCENT, on the <b>Session setup</b> screen, check the options and press <b>START</b>.</li>
+</ol>
+
+<h3>What's on</h3>
+<p>Turn on whatever you need today. VINCENT remembers your last choice.</p>
+<div class="tbl"><table>
+<tr><td><b>Engineer</b></td><td>Vincent reads the race and talks.</td></tr>
+<tr><td><b>Voice</b></td><td>He speaks on the radio. Off: he answers in writing only.</td></tr>
+<tr><td><b>Listening</b></td><td>Mic and wheel button.</td></tr>
+<tr><td><b>Spotter</b></td><td>Instant <i>car left / car right</i> and flag calls.</td></tr>
+<tr><td><b>Tools</b></td><td>Lets him look up standings, manuals and the web.</td></tr>
+<tr><td><b>Twitch chat</b></td><td>Your stream can talk to him (see <a href="#streaming">Streaming</a>).</td></tr>
+<tr><td><b>Record session</b></td><td>Saves the telemetry so the session can be replayed.</td></tr>
+</table></div>
+
+<h3>Team briefing (optional)</h3>
+<p>For endurance or team events, write him a briefing in plain words: the plan, stint lengths, who drives when, fuel targets. Lines starting with <code>//</code> are notes for you only. You can edit the briefing during a session and he picks it up on his next turn.</p>
+
+<h3>Radio overlay (optional)</h3>
+<p>A small label over iRacing that shows when VINCENT is listening, thinking or on air. Pick the screen and position. It only shows if iRacing runs in <b>borderless window</b> mode, not exclusive full screen.</p>
+</div></section><section class="gsec" id="race"><div class="ph"><span>07 · Talking to Vincent</span><small>On track</small></div><div class="gbody">
+<p>Press your radio button, speak, and let go (or press again in toggle mode). You can also type to him in <b>Write to Vincent</b>. Talk to him the way you'd talk to an engineer:</p>
+<div class="quotes">
+<span>“How's the gap behind?”</span><span>“How many laps of fuel have I got?”</span><span>“When do I box?”</span><span>“Who's quicker, me or the car ahead?”</span><span>“Where am I in class?”</span>
+</div>
+
+<h3>Standing orders</h3>
+<p>Ask him to remember something and he'll stick to it: <i>“remind me to box in three laps”</i>, <i>“don't talk to me in the last two laps”</i>, <i>“tell me if the car behind gets within a second”</i>. Change or cancel an order the same way.</p>
+
+<h3>How much he talks</h3>
+<p>Say <b>“Vincent, competition mode”</b>, <b>“normal mode”</b> or <b>“direct mode”</b> at any time. In Spanish, “Vicen, modo competición”.</p>
+<div class="tbl"><table>
+<tr><td><b>Direct</b></td><td>More colour in quiet spells, more banter. Made for streaming.</td></tr>
+<tr><td><b>Normal</b></td><td>What matters, when it matters.</td></tr>
+<tr><td><b>Competition</b></td><td>Only the essentials. Critical calls always get through.</td></tr>
+</table></div>
+<p class="small">Set the default in Settings → Advanced → <i>How much Vincent talks</i>.</p>
+
+<h3>The cockpit buttons</h3>
+<div class="tbl"><table>
+<tr><td><b>Mic</b></td><td>Talk without a wheel.</td></tr>
+<tr><td><b>Mute</b></td><td>Silences the radio until you press it again.</td></tr>
+<tr><td><b>Repeat</b></td><td>Says the last message again.</td></tr>
+<tr><td><b>Bad call</b></td><td>Flags his last message as wrong, with everything he saw at that moment. It helps a lot when you <a href="#help">report a bug</a>.</td></tr>
+</table></div>
+<p>The <b>Timing</b> tab shows the full timing wall, with sectors, stints and the last five laps of every car. The <b>Log</b> tab shows what's going on behind the scenes, and has a button to open the logs folder.</p>
+</div></section><section class="gsec" id="streaming"><div class="ph"><span>08 · Streaming</span><small>Optional</small></div><div class="gbody">
+<h3>Vincent's voice in OBS</h3>
+<p>In OBS, add an <b>Application Audio Capture</b> source and pick the <b>VINCENT</b> window. If you use Voicemeeter, you can instead send VINCENT's output to one of its inputs (for example <i>Voicemeeter In 3</i>) and route it to the bus OBS captures.</p>
+
+<h3>Stream ticker</h3>
+<p>A scrolling ticker for your scene. Set a port in Settings → Advanced → <i>Stream ticker</i>, then add a <b>Browser source</b> in OBS pointing to <code>http://localhost:PORT/ticker.html</code>. Change its message from the cockpit.</p>
+
+<h3>Twitch chat</h3>
+<p>Your viewers can ask Vincent things in chat, and he can moderate it and run your channel. In <b>Settings → Advanced → Twitch chat</b>, open <i>How to set it up, step by step</i> for the full walkthrough. In short:</p>
+<ol class="ol">
+<li>Create a Twitch account for the bot and make it a moderator: type <code>/mod yourbot</code> in your chat.</li>
+<li>At <a href="https://twitchtokengenerator.com">twitchtokengenerator.com</a>, choose <b>Custom Scope Token</b>. Tick <code>chat:read</code> and <code>chat:edit</code>, plus the moderation scopes if you want him to moderate. Log in with the <b>bot</b> account and copy the <b>Access Token</b>.</li>
+<li>Paste the token, your channel and the bot's username, then enable chat.</li>
+<li>Optional: a second token from <b>your</b> account lets him change the title and category, run predictions and polls, and thank follows, subs and raids.</li>
+</ol>
+<p class="small">Viewers talk to him with <code>!vincent</code>. With <i>Read the whole chat</i> on, he reads every message. He never bans, starts or stops the stream on his own.</p>
+
+<h3>Controlling OBS</h3>
+<p>In OBS: <b>Tools → WebSocket Server Settings → Enable</b>. Copy the password into Settings → Advanced → OBS and turn on <i>Control OBS</i>. After that, <i>“Vincent, go live”</i> checks your scene and starts the stream, and <i>“Vincent, stop the stream”</i> ends it.</p>
+</div></section><section class="gsec" id="costs"><div class="ph"><span>09 · Costs and credit</span><small>Good to know</small></div><div class="gbody">
+<ul class="list">
+<li>VINCENT is free. The only cost is AI and voice usage, which you pay straight to OpenRouter.</li>
+<li>What you've spent this session shows live at the top of the app.</li>
+<li>If your credit runs out, the app shows <b>No credit on OpenRouter</b>, the overlay shows <b>NO CREDIT</b>, and Vincent tells you on the radio. Top up at <a href="https://openrouter.ai/credits">openrouter.ai/credits</a> and he's back, with no restart needed.</li>
+<li>A credit limit on your key is the best safety net.</li>
+</ul>
+</div></section><section class="gsec" id="troubleshooting"><div class="ph"><span>10 · Troubleshooting</span><small>If something's off</small></div><div class="gbody">
+<div class="faq">
+<details class="pnl"><summary>Vincent doesn't answer</summary><p>Check the lights at the top of the app. If the LLM light is off or you see <i>No credit on OpenRouter</i>, add credit or raise the key's limit. Also check that <b>Engineer</b> is on in Session setup.</p></details>
+<details class="pnl"><summary>I can't hear him</summary><p>Make sure <b>Mute</b> isn't on and <b>Voice</b> is enabled. In Settings → Audio, pick the right output and press <b>Test output</b>.</p></details>
+<details class="pnl"><summary>He doesn't hear me</summary><p>In Settings → Audio, pick your mic and press <b>Test microphone</b>. If it says <i>Very quiet</i>, raise the mic gain in Windows. Also check that <b>Listening</b> is on in Session setup and that your wheel button is set.</p></details>
+<details class="pnl"><summary>The wheel button isn't detected</summary><p>Stop the session first: while it runs, the engine is reading the wheel. Then go to Settings → Wheel → <b>Detect button</b> and press the button.</p></details>
+<details class="pnl"><summary>The timing says “Waiting for iRacing…”</summary><p>Join a session in iRacing. The menus aren't enough, and the data only flows once you're in the car or the garage of a session.</p></details>
+<details class="pnl"><summary>I can't see the overlay</summary><p>Set iRacing's display to <b>borderless window</b>. Exclusive full screen hides anything drawn on top. Also check the overlay screen in Session setup isn't set to <i>Off</i>.</p></details>
+<details class="pnl"><summary>Sign-in problems</summary><p><i>The code expired</i>: press Retry and confirm faster. <i>Can't reach the account server</i>: check your connection; VINCENT keeps working offline for a few days. <i>This version no longer works</i>: the new one is downloading by itself.</p></details>
+</div>
+</div></section><section class="gsec" id="help"><div class="ph"><span>11 · Get help and report bugs</span><small>Community</small></div><div class="gbody">
+<p>Join the <a href="https://discord.gg/QKNpvAFxPN">VINCENT Discord</a>:</p>
+<ul class="list">
+<li><b>#setup-help</b> for anything about installing or configuring. Include your app version and a screenshot.</li>
+<li><b>#bug-reports</b> when something's wrong. Press <b>Bad call</b> at the moment it happens, then open the <b>Log</b> tab → <i>Open logs folder</i> and attach the latest log. Blur any keys first.</li>
+<li><b>#feature-requests</b> for ideas. Vote on the ones you want with 👍.</li>
+</ul>
+</div></section></div></div></main>
+<main class="guide" data-lang-block="es" lang="es">
+<div class="ghero"><p class="eyebrow">Primeros pasos</p><h1 class="head">Guía de configuración</h1><p class="lede">Todo, desde la descarga hasta tu primera carrera, en el orden en que lo vas a hacer. Unos 15 minutos la primera vez.</p></div>
+<div class="gwrap"><nav class="toc" aria-label="En esta página"><p class="toc-t">En esta página</p><ol><li><a href="#before-es"><span>01</span>Antes de empezar</a></li><li><a href="#install-es"><span>02</span>Descargar e instalar</a></li><li><a href="#signin-es"><span>03</span>Iniciar sesión</a></li><li><a href="#openrouter-es"><span>04</span>Saca tu clave de OpenRouter</a></li><li><a href="#wizard-es"><span>05</span>El asistente de configuración</a></li><li><a href="#session-es"><span>06</span>Arrancar una sesión</a></li><li><a href="#race-es"><span>07</span>Hablar con Vicen</a></li><li><a href="#streaming-es"><span>08</span>Directos</a></li><li><a href="#costs-es"><span>09</span>Costes y saldo</a></li><li><a href="#troubleshooting-es"><span>10</span>Problemas frecuentes</a></li><li><a href="#help-es"><span>11</span>Ayuda y reportar fallos</a></li></ol>
+<a class="btn btn-y toc-dc" href="https://discord.gg/QKNpvAFxPN" target="_blank" rel="noopener">Pregunta en Discord</a></nav>
+<div class="gmain"><section class="gsec" id="before-es"><div class="ph"><span>01 · Antes de empezar</span><small>Qué necesitas</small></div><div class="gbody">
+<ul class="list">
+<li>Un <b>PC con Windows</b> e <b>iRacing</b>.</li>
+<li><b>Auriculares o altavoces</b> y un <b>micrófono</b>.</li>
+<li>Conexión a internet: el cerebro, la voz y el oído de Vicen funcionan en la nube.</li>
+<li>Una cuenta de <b>Discord o Google</b> para iniciar sesión.</li>
+<li>Una cuenta de <b>OpenRouter</b> con algo de saldo; con unos 5 $ vas sobrado para empezar. VINCENT es gratis y no cobra nada: lo que uses se lo pagas directamente a OpenRouter.</li>
+<li>Opcional: un <b>botón del volante</b> para la radio. Sin volante, hablas con el botón Micro de la app.</li>
+</ul>
+</div></section><section class="gsec" id="install-es"><div class="ph"><span>02 · Descargar e instalar</span><small>Paso 1</small></div><div class="gbody">
+<ol class="ol">
+<li>Entra en <a href="https://account.vincent-ai.app/download">account.vincent-ai.app/download</a> e inicia sesión con Discord o Google.</li>
+<li>Descarga el instalador y ábrelo.</li>
+<li>La primera vez Windows puede decir <b>«Windows protegió su PC»</b> (SmartScreen). Pulsa <b>Más información → Ejecutar de todas formas</b>. Solo pasa una vez.</li>
+</ol>
+<p class="note"><b>Se actualiza solo.</b> VINCENT descarga las versiones nuevas al abrirse y las instala al cerrarlo. Si arriba ves <b>Actualizar a x.x.x</b>, púlsalo para hacerlo al momento.</p>
+</div></section><section class="gsec" id="signin-es"><div class="ph"><span>03 · Iniciar sesión</span><small>Paso 2</small></div><div class="gbody">
+<p>La primera vez que abres VINCENT te pide entrar.</p>
+<ol class="ol">
+<li>Pulsa <b>Iniciar sesión</b>: se abre el navegador.</li>
+<li>Entra con la misma cuenta de Discord o Google.</li>
+<li>Comprueba que el código del navegador <b>es el mismo que el de la app</b> y confirma. VINCENT sigue solo.</li>
+</ol>
+<p class="note">Cada cuenta funciona en hasta <b>3 PCs</b>, que gestionas en <a href="https://account.vincent-ai.app/">account.vincent-ai.app</a>. Si se te cae internet, sigue funcionando unos días con tu último inicio de sesión.</p>
+</div></section><section class="gsec" id="openrouter-es"><div class="ph"><span>04 · Saca tu clave de OpenRouter</span><small>Paso 3</small></div><div class="gbody">
+<p>Con una sola clave funciona todo: el cerebro del ingeniero, su voz y su oído.</p>
+<ol class="ol">
+<li>Crea una cuenta en <a href="https://openrouter.ai">openrouter.ai</a>.</li>
+<li>Entra en <b>Credits</b> y añade saldo; con unos <b>5 $</b> tienes para rato.</li>
+<li>Entra en <b>Keys → Create key</b>, llámala <i>VINCENT</i> y <b>ponle un límite de crédito</b> (por ejemplo 10 $).</li>
+<li>Copia la clave (empieza por <code>sk-or-</code>). La pegarás en el siguiente paso.</li>
+</ol>
+<p class="note warn"><b>Trátala como una contraseña.</b> No la compartas ni la enseñes en capturas. VINCENT la guarda en el Administrador de credenciales de Windows y solo se la envía a OpenRouter. Con el límite de crédito, una clave filtrada nunca te costará más que ese límite.</p>
+</div></section><section class="gsec" id="wizard-es"><div class="ph"><span>05 · El asistente de configuración</span><small>Paso 4</small></div><div class="gbody">
+<p>La primera vez, VINCENT te lleva por estas pantallas. Todo se puede cambiar después desde <b>Ajustes</b>, arriba en la app.</p>
+
+<h3>General</h3>
+<ul class="list">
+<li><b>Idioma:</b> español o inglés, de la app y del ingeniero: cómo habla, su voz y cómo te entiende.</li>
+<li><b>Personalidad:</b> <b>Clásico</b>, seco y directo; <b>Veterano</b>, de la vieja escuela, cálido y con batallitas. Mismo ingeniero y misma estrategia; solo cambia el carácter.</li>
+<li><b>Botón del micro:</b> <b>Mantener pulsado</b> (hablas mientras lo aprietas) o <b>Pulsar y otra vez para cerrar</b>. Si se te olvida cerrarlo, se cierra solo a los 20 segundos.</li>
+</ul>
+
+<h3>Claves</h3>
+<ul class="list">
+<li>Pega tu clave de <b>OpenRouter</b> y pulsa <b>Probar</b>. Debe salir <i>Clave válida · saldo $…</i>.</li>
+<li><b>Fish Audio</b> y <b>Deepgram</b> son opcionales: úsalas solo si ya tienes cuenta. Sin ellas funciona todo.</li>
+</ul>
+
+<h3>Modelo</h3>
+<p>Decide cómo de listo (y de caro) es tu ingeniero. Estimaciones por hora de carrera:</p>
+<div class="tbl"><table>
+<tr><th>Modelo</th><th>Coste / hora</th><th>Notas</th></tr>
+<tr><td>Claude Haiku 5.5</td><td>≈ 0,08 $</td><td>El más barato. Algo más plano y se equivoca más en situaciones raras.</td></tr>
+<tr class="rec"><td>Gemini 3.8 Flash</td><td>≈ 0,47 $</td><td><b>Recomendado.</b> Rápido, con chispa y variedad. La mejor opción para casi todos.</td></tr>
+<tr><td>GPT 6.1 Terra</td><td>≈ 0,50 $</td><td>Muy rápido y prudente; habla poco. Aún en pruebas.</td></tr>
+<tr><td>Claude Sonnet 5.5</td><td>≈ 1,00 $</td><td>El más potente, para quien quiere lo máximo.</td></tr>
+</table></div>
+<p class="small">El coste real depende de cuánto hables con él y de lo larga que sea la carrera; lo que llevas gastado se ve en directo arriba en la app. <b>Personalizado</b> admite cualquier modelo de OpenRouter compatible con herramientas.</p>
+
+<h3>Voz</h3>
+<ul class="list">
+<li>Pulsa <b>Escuchar</b> para oír cada voz con el efecto de radio y elige. En español: <b>Antonio</b> y <b>Florencio</b>. En inglés: <b>Vincent</b>, <b>Adrian</b> y <b>Slax</b>.</li>
+<li>Escuchar una voz por primera vez gasta una fracción de céntimo.</li>
+<li>Avanzado: <b>Otra voz de Fish</b> te deja pegar el ID de cualquier voz de fish.audio.</li>
+</ul>
+
+<h3>Escucha</h3>
+<p>Cómo se convierte en texto lo que dices por radio:</p>
+<ul class="list">
+<li><b>En la nube, con tu clave de OpenRouter</b> (recomendado): la más precisa y rápida, texto listo unos 0,3 s después de soltar el botón, por unos 2 céntimos por hora de carrera.</li>
+<li><b>En tu PC</b>: gratis y sin conexión, pero menos precisa con la jerga y más lenta (~1,5 s). Hay que descargar un modelo una vez y usa algo de CPU al transcribir.</li>
+<li><b>Deepgram</b>: en tiempo real y con vocabulario de carrera. Solo si añadiste clave de Deepgram.</li>
+</ul>
+
+<h3>Audio</h3>
+<ul class="list">
+<li><b>Salida:</b> por dónde habla VINCENT (tus auriculares). Pulsa <b>Probar salida</b>: tienes que oír dos pitidos.</li>
+<li><b>Entrada:</b> tu micrófono. Pulsa <b>Probar micrófono</b> y habla normal dos segundos. <i>Se oye bien</i>: listo. <i>Se oye muy bajo</i>: sube la ganancia del micro en Windows. <i>No se oye nada</i>: micro equivocado o silenciado.</li>
+</ul>
+
+<h3>Volante</h3>
+<ul class="list">
+<li>Pulsa <b>Detectar botón</b> y aprieta el botón del volante que quieres para la radio. Verás <i>✓ tu volante · botón N</i>.</li>
+<li>¿Sin volante? Sáltalo y usa el botón <b>Micro</b> de la app.</li>
+</ul>
+
+<h3>Listo</h3>
+<p>Verás un resumen de todo lo que has elegido. Ahora abre iRacing.</p>
+</div></section><section class="gsec" id="session-es"><div class="ph"><span>06 · Arrancar una sesión</span><small>Paso 5</small></div><div class="gbody">
+<ol class="ol">
+<li>Abre iRacing y <b>entra en una sesión</b> (entreno, clasificación o carrera). Estar en los menús no basta.</li>
+<li>En VINCENT, en <b>Preparar sesión</b>, revisa las opciones y pulsa <b>ARRANCAR</b>.</li>
+</ol>
+
+<h3>Qué se enciende</h3>
+<p>Activa lo que necesites hoy; se recuerda lo último que usaste.</p>
+<div class="tbl"><table>
+<tr><td><b>Ingeniero</b></td><td>Vicen analiza la carrera y habla.</td></tr>
+<tr><td><b>Voz</b></td><td>Habla por la radio. Apagado: contesta solo por escrito.</td></tr>
+<tr><td><b>Escucha</b></td><td>Micro y botón del volante.</td></tr>
+<tr><td><b>Spotter</b></td><td>Avisos al momento de coche a la izquierda/derecha y banderas.</td></tr>
+<tr><td><b>Herramientas</b></td><td>Le deja consultar clasificaciones, manuales y la web.</td></tr>
+<tr><td><b>Chat de Twitch</b></td><td>Tu directo puede hablarle (mira <a href="#streaming-es">Directos</a>).</td></tr>
+<tr><td><b>Grabar sesión</b></td><td>Guarda la telemetría para poder reproducirla.</td></tr>
+</table></div>
+
+<h3>Briefing de equipo (opcional)</h3>
+<p>Para resistencias o carreras por equipos, escríbele un briefing con tus palabras: el plan, la duración de los stints, quién conduce cuándo, objetivos de gasolina. Las líneas que empiezan por <code>//</code> son notas tuyas. Puedes editarlo con la sesión en marcha y lo lee en su siguiente turno.</p>
+
+<h3>Overlay de radio (opcional)</h3>
+<p>Una etiqueta pequeña encima de iRacing que indica cuándo VINCENT te escucha, piensa o está en el aire. Elige pantalla y posición. Solo se ve si iRacing va en <b>ventana sin bordes</b>, no en pantalla completa exclusiva.</p>
+</div></section><section class="gsec" id="race-es"><div class="ph"><span>07 · Hablar con Vicen</span><small>En pista</small></div><div class="gbody">
+<p>Pulsa el botón de radio, habla y suelta (o vuelve a pulsar si usas el modo de pulsar y cerrar). También puedes escribirle en <b>Escribir a Vicen</b>. Háblale como a un ingeniero:</p>
+<div class="quotes">
+<span>«¿Cómo va el de detrás?»</span><span>«¿Cuántas vueltas de gasolina me quedan?»</span><span>«¿Cuándo paro?»</span><span>«¿Quién va más rápido, yo o el de delante?»</span><span>«¿Cómo voy en mi clase?»</span>
+</div>
+
+<h3>Órdenes</h3>
+<p>Pídele que recuerde algo y lo cumplirá: <i>«avísame para entrar dentro de tres vueltas»</i>, <i>«no me hables en las dos últimas vueltas»</i>, <i>«dime si el de detrás se pone a menos de un segundo»</i>. Para cambiarla o anularla, díselo igual.</p>
+
+<h3>Cuánto habla</h3>
+<p>Di <b>«Vicen, modo competición»</b>, <b>«modo normal»</b> o <b>«modo directo»</b> cuando quieras. En inglés también vale: «Vincent, competition mode».</p>
+<div class="tbl"><table>
+<tr><td><b>Directo</b></td><td>Más color en los tramos tranquilos y más juego. Pensado para directos.</td></tr>
+<tr><td><b>Normal</b></td><td>Lo importante, cuando importa.</td></tr>
+<tr><td><b>Competición</b></td><td>Solo lo esencial. Los avisos críticos siempre llegan.</td></tr>
+</table></div>
+<p class="small">El modo por defecto se elige en Ajustes → Avanzado → <i>Cuánto habla Vicen</i>.</p>
+
+<h3>Los botones de la cabina</h3>
+<div class="tbl"><table>
+<tr><td><b>Micro</b></td><td>Hablar sin volante.</td></tr>
+<tr><td><b>Silenciar</b></td><td>Silencia la radio hasta que lo vuelvas a pulsar.</td></tr>
+<tr><td><b>Repetir</b></td><td>Repite el último mensaje.</td></tr>
+<tr><td><b>Fallo</b></td><td>Marca su último mensaje como erróneo, con todo lo que veía en ese momento. Ayuda mucho para <a href="#help-es">reportar un fallo</a>.</td></tr>
+</table></div>
+<p>La pestaña <b>Timing</b> es el muro de tiempos completo (sectores, stints, últimas cinco vueltas de cada coche). La pestaña <b>Registro</b> muestra lo que pasa por dentro y tiene un botón para abrir la carpeta de logs.</p>
+</div></section><section class="gsec" id="streaming-es"><div class="ph"><span>08 · Directos</span><small>Opcional</small></div><div class="gbody">
+<h3>La voz de Vicen en OBS</h3>
+<p>En OBS añade una fuente <b>Captura de audio de aplicación</b> y elige la ventana <b>VINCENT</b>. Si usas Voicemeeter, también puedes mandar la salida de VINCENT a una de sus entradas (p. ej. <i>Voicemeeter In 3</i>) y llevarla al bus que captura OBS.</p>
+
+<h3>Letrero para el stream</h3>
+<p>Un rótulo que se desplaza para tu escena. Pon un puerto en Ajustes → Avanzado → <i>Letrero para el stream</i> y en OBS añade una <b>Fuente de navegador</b> con <code>http://localhost:PUERTO/ticker.html</code>. El mensaje se cambia desde la cabina.</p>
+
+<h3>Chat de Twitch</h3>
+<p>Tus espectadores pueden preguntarle cosas a Vicen por el chat, y él puede moderarlo y manejar tu canal. En <b>Ajustes → Avanzado → Chat de Twitch</b> abre <i>Cómo se configura, paso a paso</i> para la guía completa. Resumido:</p>
+<ol class="ol">
+<li>Crea una cuenta de Twitch para el bot y hazla moderadora: escribe <code>/mod tubot</code> en tu chat.</li>
+<li>En <a href="https://twitchtokengenerator.com">twitchtokengenerator.com</a> elige <b>Custom Scope Token</b>, marca <code>chat:read</code> y <code>chat:edit</code> (y los de moderar si quieres que modere), entra con la cuenta <b>del bot</b> y copia el <b>Access Token</b>.</li>
+<li>Pega el token, tu canal y el usuario del bot, y activa el chat.</li>
+<li>Opcional: un segundo token de <b>tu</b> cuenta le deja cambiar título y categoría, hacer predicciones y encuestas y agradecer follows, subs y raids.</li>
+</ol>
+<p class="small">Los espectadores le hablan con <code>!vicen</code>; con <i>Leer todo el chat</i>, lee todos los mensajes. Nunca banea, arranca ni para el directo por su cuenta.</p>
+
+<h3>Controlar OBS</h3>
+<p>En OBS: <b>Herramientas → Ajustes del servidor WebSocket → Activar</b>. Copia la contraseña en Ajustes → Avanzado → OBS y activa <i>Controlar OBS</i>. Después, <i>«Vicen, arranca directo»</i> revisa tu escena y empieza a emitir, y <i>«Vicen, para el directo»</i> lo corta.</p>
+</div></section><section class="gsec" id="costs-es"><div class="ph"><span>09 · Costes y saldo</span><small>Conviene saber</small></div><div class="gbody">
+<ul class="list">
+<li>VINCENT es gratis. El único gasto es el uso de IA y voz, que pagas directamente a OpenRouter.</li>
+<li>Lo que llevas gastado en la sesión se ve en directo arriba en la app.</li>
+<li>Si se acaba el saldo, la app muestra <b>Sin saldo en OpenRouter</b>, el overlay pone <b>SIN SALDO</b> y Vicen te lo dice por radio. Recarga en <a href="https://openrouter.ai/credits">openrouter.ai/credits</a> y vuelve sin reiniciar nada.</li>
+<li>Un límite de crédito en la clave es tu mejor red de seguridad.</li>
+</ul>
+</div></section><section class="gsec" id="troubleshooting-es"><div class="ph"><span>10 · Problemas frecuentes</span><small>Si algo falla</small></div><div class="gbody">
+<div class="faq">
+<details class="pnl"><summary>Vicen no contesta</summary><p>Mira los indicadores de arriba en la app. Si el de LLM está apagado o ves <i>Sin saldo en OpenRouter</i>, añade saldo o sube el límite de la clave. Comprueba también que <b>Ingeniero</b> está activado en Preparar sesión.</p></details>
+<details class="pnl"><summary>No le oigo</summary><p>Comprueba que <b>Silenciar</b> no está puesto y que <b>Voz</b> está activada. En Ajustes → Audio, elige la salida correcta y pulsa <b>Probar salida</b>.</p></details>
+<details class="pnl"><summary>No me oye</summary><p>En Ajustes → Audio, elige tu micro y pulsa <b>Probar micrófono</b>. Si dice <i>muy bajo</i>, sube la ganancia en Windows. Comprueba que <b>Escucha</b> está activada y que el botón del volante está configurado.</p></details>
+<details class="pnl"><summary>No detecta el botón del volante</summary><p>Detén antes la sesión: mientras está en marcha, el motor está leyendo el volante. Luego Ajustes → Volante → <b>Detectar botón</b> y aprieta el botón.</p></details>
+<details class="pnl"><summary>El timing dice «Esperando a iRacing…»</summary><p>Entra en una sesión en iRacing. En los menús no hay datos: solo llegan cuando estás en el coche o en el garaje de una sesión.</p></details>
+<details class="pnl"><summary>No veo el overlay</summary><p>Pon iRacing en <b>ventana sin bordes</b>; la pantalla completa exclusiva tapa todo lo que se dibuja encima. Revisa también que la pantalla del overlay no esté en <i>Apagado</i>.</p></details>
+<details class="pnl"><summary>Problemas al iniciar sesión</summary><p><i>El código ha caducado</i>: pulsa Reintentar y confirma antes. <i>Sin conexión con el servidor de cuentas</i>: revisa internet; sigue funcionando unos días sin conexión. <i>Esta versión ya no funciona</i>: la nueva se está descargando sola.</p></details>
+</div>
+</div></section><section class="gsec" id="help-es"><div class="ph"><span>11 · Ayuda y reportar fallos</span><small>Comunidad</small></div><div class="gbody">
+<p>Entra en el <a href="https://discord.gg/QKNpvAFxPN">Discord de VINCENT</a>:</p>
+<ul class="list">
+<li><b>#setup-help</b> para todo lo de instalar y configurar. Indica tu versión y añade una captura.</li>
+<li><b>#bug-reports</b> si algo va mal. Pulsa <b>Fallo</b> en el momento, abre la pestaña <b>Registro</b> → <i>Abrir carpeta de logs</i> y adjunta el último log (tapa antes cualquier clave).</li>
+<li><b>#feature-requests</b> para ideas; vota con 👍 las que quieras.</li>
+</ul>
+<p class="small">Para escribir en español tienes el canal #general-es: elige «Español» al entrar.</p>
+</div></section></div></div></main>
+<footer class="foot">
+  <img src="assets/logo.svg" alt="VINCENT" width="110" height="17">
+  <p data-en="VINCENT is an independent project, not affiliated with or endorsed by iRacing.com Motorsport Simulations." data-es="VINCENT es un proyecto independiente, sin relación ni respaldo de iRacing.com Motorsport Simulations.">VINCENT is an independent project, not affiliated with or endorsed by iRacing.com Motorsport Simulations.</p>
+  <p><a href="https://account.vincent-ai.app/" data-en="My account" data-es="Mi cuenta">My account</a> · <a href="privacy.html" data-en="Privacy" data-es="Privacidad">Privacy</a> · <a href="https://discord.gg/QKNpvAFxPN" target="_blank" rel="noopener">Discord</a></p>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

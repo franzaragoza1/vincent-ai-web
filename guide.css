@@ -1,0 +1,47 @@
+/* ---------- setup guide ---------- */
+html[lang="en"] [data-lang-block="es"],html[lang="es"] [data-lang-block="en"]{display:none}
+.top nav a[aria-current="page"]{color:var(--w);border-bottom-color:var(--team)}
+.guide{max-width:1280px;margin:0 auto;padding:64px 40px 96px}
+.ghero{max-width:860px;margin-bottom:48px}
+.ghero .head{font-size:clamp(44px,6vw,80px);margin:0 0 18px}
+.gwrap{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:start}
+.toc{position:sticky;top:84px;background:var(--deep);border:1px solid #000;padding:18px 0 20px}
+.toc-t{margin:0 18px 10px;font:700 14px/1 Cond,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc a{display:flex;gap:10px;padding:8px 18px;font-size:14.5px;color:var(--soft);text-decoration:none;border-left:3px solid transparent}
+.toc a span{font:700 14px/1.5 Cond,sans-serif;color:var(--team)}
+.toc a:hover{background:#26282c;border-left-color:var(--team);color:#fff}
+.toc-dc{margin:16px 18px 0;width:calc(100% - 36px);font-size:15px}
+.gmain{display:flex;flex-direction:column;gap:26px;min-width:0}
+.gsec{background:var(--pnl);border:1px solid #55585D;color:var(--ink);scroll-margin-top:80px}
+.gsec .ph small{color:var(--team);font:700 13px/1 Cond,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.gbody{padding:24px 28px 28px;font-size:16.5px;line-height:1.65}
+.gbody p{margin:0 0 14px}
+.gbody h3{margin:26px 0 10px;font:800 24px/1.1 Cond,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
+.gbody h3:first-child{margin-top:0}
+.gbody a{color:#00468a;font-weight:600}
+.gbody code{font:600 14px/1 ui-monospace,Consolas,monospace;background:#e4e5e7;border:1px solid #a9acb1;padding:2px 5px}
+.gbody .list{margin:0 0 14px}
+.gbody .list li{color:var(--ink);font-size:16.5px}
+.ol{margin:0 0 16px;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
+.ol li{counter-increment:s;position:relative;padding-left:42px}
+.ol li::before{content:counter(s);position:absolute;left:0;top:-1px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--team);font:800 17px/1 Cond,sans-serif}
+.note{background:#d8dadd;border-left:4px solid var(--ink);padding:12px 16px}
+.note.warn{border-left-color:#c42b1c;background:#e9d6d4}
+.small{font-size:14.5px;color:var(--dim)}
+.tbl{overflow-x:auto;margin:0 0 14px;border:1px solid #000}
+.tbl table{width:100%;border-collapse:collapse;background:#000;color:var(--soft);font-size:15px}
+.tbl th{font:700 15px/1 Cond,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--cya);text-align:left;padding:12px 14px;border-bottom:1px solid #333}
+.tbl td{padding:10px 14px;border-bottom:1px solid #222;vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{white-space:nowrap;color:#fff}
+.tbl tr.rec td{background:#2b2600}
+.quotes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.quotes span{background:#000;color:var(--w);padding:8px 12px;font-size:15px;border-left:3px solid var(--team)}
+.gbody .faq{max-width:none}
+.gbody .faq summary{font-size:19px}
+.gbody .faq p{margin:0;font-size:15.5px}
+@media (max-width:1000px){.gwrap{grid-template-columns:1fr}.toc{position:static}}
+@media (max-width:720px){.guide{padding:40px 16px 72px}.gbody{padding:18px 16px 22px}.tbl td:first-child{white-space:normal}}
+.toc a.toc-dc{color:#000;border-left:0;padding:0 14px;justify-content:center}
+.toc a.toc-dc:hover{background:#FFE54D;color:#000}
