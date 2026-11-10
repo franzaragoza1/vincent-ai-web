@@ -153,6 +153,24 @@ a{color:inherit}
 .foot img{filter:invert(1);opacity:.75}
 .foot p{margin:0}
 
+
+/* ---------- discord ---------- */
+.dc-ico{display:flex;align-items:center;justify-content:center;width:40px;height:40px;color:var(--mute);flex:none}
+.dc-ico:hover{color:#fff;background:#5865F2}
+.community{padding-top:24px}
+.dc-card{color:var(--ink)}
+.dc-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;padding:36px 36px 40px;align-items:center}
+.dc-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.dc-copy .eyebrow{color:var(--dim)}
+.dc-copy .sec{color:var(--ink);margin:0}
+.dc-copy p{margin:0;font-size:17px;max-width:560px}
+.dc-list{list-style:none;margin:0;padding:0;background:#000;border:1px solid #000}
+.dc-list li{display:flex;flex-direction:column;gap:2px;padding:14px 18px;border-bottom:1px solid #222}
+.dc-list li:last-child{border-bottom:0}
+.dc-list b{font:700 20px/1.1 Cond,sans-serif;letter-spacing:.06em;color:var(--cya)}
+.dc-list span{font-size:15px;color:var(--soft)}
+@media (max-width:900px){.dc-body{grid-template-columns:1fr;padding:24px 18px 28px;gap:24px}}
+
 /* ---------- reveal on scroll ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
