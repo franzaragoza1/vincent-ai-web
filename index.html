@@ -49,7 +49,7 @@
     <p class="lede" data-en="VINCENT is the engineer on your radio. He tracks every car on every lap, plans your fuel and your stops, and tells you what you need to know — the moment you need it. Press one button on your wheel and just ask." data-es="VINCENT es el ingeniero que llevas en la radio. Sigue a cada coche en cada vuelta, te planifica la gasolina y las paradas y te dice lo que necesitas saber, justo cuando lo necesitas. Pulsa un botón del volante y pregúntale.">VINCENT is the engineer on your radio. He tracks every car on every lap, plans your fuel and your stops, and tells you what you need to know — the moment you need it. Press one button on your wheel and just ask.</p>
     <div class="cta">
       <a class="btn btn-y btn-big dl" href="https://account.vincent-ai.app/download"><span data-en="Download free for Windows" data-es="Descargar gratis para Windows">Download free for Windows</span></a>
-      <a class="btn btn-ghost btn-big" href="#features" data-en="See it in action" data-es="Míralo en acción">See it in action</a>
+      <a class="btn btn-ghost btn-big" href="#video" data-en="See it in action" data-es="Míralo en acción">See it in action</a>
     </div>
     <ul class="ticks">
       <li data-en="100% free, no catch" data-es="100% gratis, sin trampas">100% free, no catch</li>
@@ -68,6 +68,27 @@
     </figure>
     <div class="onair float" aria-hidden="true"><span class="k">VINCENT</span><span class="v"><span class="bars"><i></i><i></i><i></i><i></i></span>ON AIR</span></div>
   </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section id="video" class="band video">
+  <p class="eyebrow" data-en="On the radio" data-es="En la radio">On the radio</p>
+  <h2 class="sec" data-en="Hear him in a real race" data-es="Escúchalo en una carrera real">Hear him in a real race</h2>
+  <div class="yt" data-lang-block="en" data-yt="O_I4nslNCWw">
+    <button type="button" class="yt-play" aria-label="Play the English demo video">
+      <img src="assets/shots/cabin-en.webp" alt="" width="1600" height="900" loading="lazy">
+      <span class="yt-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+      <span class="yt-t">VINCENT · English</span>
+    </button>
+  </div>
+  <div class="yt" data-lang-block="es" data-yt="qXHsbGMtjUI">
+    <button type="button" class="yt-play" aria-label="Reproducir el vídeo de muestra en español">
+      <img src="assets/shots/cabin-es.webp" alt="" width="1600" height="900" loading="lazy">
+      <span class="yt-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+      <span class="yt-t">VINCENT · Español</span>
+    </button>
+  </div>
+  <p class="yt-alt"><a href="https://www.youtube.com/watch?v=O_I4nslNCWw" data-lang-block="en" target="_blank" rel="noopener">Watch on YouTube</a><a href="https://www.youtube.com/watch?v=qXHsbGMtjUI" data-lang-block="es" target="_blank" rel="noopener">Ver en YouTube</a></p>
 </section>
 
 <!-- ================= STRIP ================= -->
@@ -249,6 +270,16 @@
   <p><a href="https://account.vincent-ai.app/" data-en="My account" data-es="Mi cuenta">My account</a> · <a href="guide.html" data-en="Setup guide" data-es="Guía de configuración">Setup guide</a> · <a href="privacy.html" data-en="Privacy" data-es="Privacidad">Privacy</a> · <a href="https://discord.gg/QKNpvAFxPN" target="_blank" rel="noopener">Discord</a></p>
 </footer>
 
+<script>
+document.querySelectorAll('.yt').forEach(function (box) {
+  box.querySelector('.yt-play').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + box.dataset.yt + '?autoplay=1&rel=0';
+    f.title = 'VINCENT'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+    box.innerHTML = ''; box.appendChild(f);
+  });
+});
+</script>
 <script src="site.js"></script>
 </body>
 </html>
