@@ -110,6 +110,7 @@ a{color:inherit}
 .spot{display:inline-flex;justify-self:start;height:48px;margin-top:8px;border:1px solid #000;background:#000;font:700 22px/1 Cond,sans-serif;letter-spacing:.1em}
 .spot .k{display:flex;align-items:center;padding:0 14px;background:var(--red);color:#000}
 .spot .v{display:flex;align-items:center;padding:0 16px;color:var(--w)}
+.spot.tw .k{background:#9146FF;color:#fff}
 
 .overlays{display:grid;gap:14px;justify-items:start;padding:36px;width:100%;max-width:560px;background:
   linear-gradient(135deg,rgba(0,0,0,.35),rgba(0,0,0,.05)),
